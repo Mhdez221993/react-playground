@@ -1,10 +1,13 @@
 import './App.css';
 
-// import Counter from './components/Counter';
-import Greet from './components/Greet';
-// import Message from './components/Message';
+import ClassClick from './components/ClassClick';
+import FucntionClick from './components/FucntionClick';
 import React from 'react';
-import Welcome from './components/Welcome';
+
+// import Counter from './components/Counter';
+// import Greet from './components/Greet';
+// import Message from './components/Message';
+// import Welcome from './components/Welcome';
 
 class App extends React.Component {
   render() {
@@ -12,17 +15,21 @@ class App extends React.Component {
       <div className="App">
         {/* <Hello /> */}
 
-       <Greet name="Greeting componenet" >
+       {/* <Greet name="Greeting componenet" >
           <p>Children props</p>
-       </Greet>
+       </Greet> */}
 
-       <Welcome name="Welcome component">
+       {/* <Welcome name="Welcome component">
         <p>Children props</p>
-       </Welcome>
+       </Welcome> */}
 
        {/* <Message /> */}
 
        {/* <Counter /> */}
+
+       <FucntionClick />
+
+       <ClassClick />
       </div>
     );
   }
