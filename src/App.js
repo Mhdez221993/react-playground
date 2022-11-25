@@ -4,8 +4,7 @@ import './App.css';
 import Greet from './components/Greet';
 // import Message from './components/Message';
 import React from 'react';
-
-// import Welcome from './components/Welcome';
+import Welcome from './components/Welcome';
 
 class App extends React.Component {
   render() {
@@ -17,9 +16,9 @@ class App extends React.Component {
           <p>Children props</p>
        </Greet>
 
-       {/* <Welcome name="Welcome component">
+       <Welcome name="Welcome component">
         <p>Children props</p>
-       </Welcome> */}
+       </Welcome>
 
        {/* <Message /> */}
 
