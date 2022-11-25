@@ -1,6 +1,7 @@
 import './App.css';
 
-import Message from './components/Message';
+import Counter from './components/Counter';
+// import Message from './components/Message';
 // import Greet from './components/Greet';
 import React from 'react';
 
@@ -19,7 +20,9 @@ class App extends React.Component {
         <p>Children props</p>
        </Welcome> */}
 
-       <Message />
+       {/* <Message /> */}
+
+       <Counter />
       </div>
     );
   }
