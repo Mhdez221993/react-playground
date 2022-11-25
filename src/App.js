@@ -1,8 +1,10 @@
 import './App.css';
 
-import ClassClick from './components/ClassClick';
-import FucntionClick from './components/FucntionClick';
+import EvenBind from './components/EvenBind';
 import React from 'react';
+
+// import ClassClick from './components/ClassClick';
+// import FucntionClick from './components/FucntionClick';
 
 // import Counter from './components/Counter';
 // import Greet from './components/Greet';
@@ -27,9 +29,11 @@ class App extends React.Component {
 
        {/* <Counter /> */}
 
-       <FucntionClick />
+       {/* <FucntionClick />
 
-       <ClassClick />
+       <ClassClick /> */}
+
+       <EvenBind />
       </div>
     );
   }
