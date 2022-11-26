@@ -1,6 +1,7 @@
 import './App.css';
 
-import EvenBind from './components/EvenBind';
+import ParentComponent from './components/ParentComponent';
+// import EvenBind from './components/EvenBind';
 import React from 'react';
 
 // import ClassClick from './components/ClassClick';
@@ -33,7 +34,9 @@ class App extends React.Component {
 
        <ClassClick /> */}
 
-       <EvenBind />
+       {/* <EvenBind /> */}
+
+       <ParentComponent />
       </div>
     );
   }
