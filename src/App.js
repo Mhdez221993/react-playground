@@ -1,7 +1,7 @@
 import './App.css';
 
+import Inline from './components/Inline';
 import React from 'react';
-import Stylesheet from './components/Stylesheet';
 
 class App extends React.Component {
   render() {
@@ -33,7 +33,9 @@ class App extends React.Component {
 
        {/* <NameList /> */}
 
-       <Stylesheet primary='primary' />
+       {/* <Stylesheet primary='primary' /> */}
+
+       <Inline />
       </div>
     );
   }
