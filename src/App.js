@@ -1,14 +1,14 @@
 import './App.css';
 import './components/appStyle.css';
 
-import HookMouse from './components/HookMouse';
+import MouseContainer from './components/MouseContainer';
 import React from 'react';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <HookMouse />
+        <MouseContainer />
       </div>
     );
   }
