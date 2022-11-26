@@ -1,14 +1,16 @@
 import './App.css';
 import './components/appStyle.css';
 
-import FragmentDemo from './components/FragmentDemo';
 import React from 'react';
+import Table from './components/Table';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <FragmentDemo />
+        <Table />
+
+        {/* <FragmentDemo /> */}
 
         {/* <LifecycleA /> */}
 
