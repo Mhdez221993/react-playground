@@ -1,14 +1,14 @@
 import './App.css';
 import './components/appStyle.css';
 
-import PostList from './components/PostList';
+import PostForm from './components/PostForm';
 import React from 'react';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <PostList />
+        <PostForm />
       </div>
     );
   }
