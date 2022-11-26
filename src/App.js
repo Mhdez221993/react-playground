@@ -1,16 +1,7 @@
 import './App.css';
 
-import ParentComponent from './components/ParentComponent';
-// import EvenBind from './components/EvenBind';
 import React from 'react';
-
-// import ClassClick from './components/ClassClick';
-// import FucntionClick from './components/FucntionClick';
-
-// import Counter from './components/Counter';
-// import Greet from './components/Greet';
-// import Message from './components/Message';
-// import Welcome from './components/Welcome';
+import UserGreeting from './components/UserGreeting';
 
 class App extends React.Component {
   render() {
@@ -36,7 +27,9 @@ class App extends React.Component {
 
        {/* <EvenBind /> */}
 
-       <ParentComponent />
+       {/* <ParentComponent /> */}
+
+       <UserGreeting />
       </div>
     );
   }
