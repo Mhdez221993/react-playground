@@ -10,21 +10,19 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <CounterTwo
-          render={(count, incrementCount) => (
-              <ClickCounterTwo
-                count={count}
-                incrementCount={incrementCount}
-          />)}/>
+        <CounterTwo>
+          {(count, incrementCount) => (
+              <ClickCounterTwo count={count} incrementCount={incrementCount} />
+          )}
+        </CounterTwo>
 
         <br />
 
-        <CounterTwo
-          render={(count, incrementCount) => (
-              <HoverCounterTwo
-                count={count}
-                incrementCount={incrementCount}
-          />)}/>
+        <CounterTwo>
+          {(count, incrementCount) => (
+              <HoverCounterTwo count={count} incrementCount={incrementCount} />
+          )}
+        </CounterTwo>
       </div>
     );
   }
