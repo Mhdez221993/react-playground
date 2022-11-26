@@ -1,7 +1,7 @@
 import './App.css';
 
-import NameList from './components/NameList';
 import React from 'react';
+import Stylesheet from './components/Stylesheet';
 
 class App extends React.Component {
   render() {
@@ -31,7 +31,9 @@ class App extends React.Component {
 
        {/* <UserGreeting /> */}
 
-       <NameList />
+       {/* <NameList /> */}
+
+       <Stylesheet primary='primary' />
       </div>
     );
   }
