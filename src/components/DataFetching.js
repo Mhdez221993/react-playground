@@ -3,27 +3,32 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const DataFetching = () => {
-  const [posts, setPosts] = useState([])
+  const [post, setPost] = useState({})
   const [id, setId] = useState(1)
+  const [idFromButton, setIdFromButtonClick] = useState(1)
 
   useEffect(() => {
-    axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    axios.get(`https://jsonplaceholder.typicode.com/posts/${idFromButton}`)
       .then((res) => {
         console.log(res);
-        setPosts([...posts, res.data])
+        setPost(res.data)
       })
       .catch((e) => {
         console.log(e);
       })
-  }, [id])
+  }, [idFromButton])
+
+  const handleClick = () => {
+    setIdFromButtonClick(id)
+  }
 
   return (
     <div>
       <input type="text" value={id} onChange={(e) => setId(e.target.value)} />
+      <button onClick={handleClick}>Find Post by ID</button>
       <ul>
-        {
-          posts.map((post) => <li key={post.id}>{post.title}</li>)
-        }
+          {/* posts.map((post) => <li key={post.id}>{post.title}</li>) */}
+         <li key={post.id}>{post.title}</li>
       </ul>
     </div>
   );
