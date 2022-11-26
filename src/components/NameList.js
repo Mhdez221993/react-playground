@@ -1,4 +1,3 @@
-import Person from './Person';
 import React from 'react';
 
 const NameList = () => {
@@ -23,12 +22,14 @@ const NameList = () => {
     }
   ]
 
-  const personList = persons.map(person => <Person person={person} key={person.id} />)
+  const names = ['Peter', 'Clark', 'John', 'Peter']
+
+  const nameList = names.map((name, i) => <h2 key={i}>{name}</h2>)
 
   return (
     <div>
       {
-        personList
+        nameList
       }
     </div>
   );
