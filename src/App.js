@@ -1,14 +1,16 @@
 import './App.css';
 import './components/appStyle.css';
 
-import Form from './components/Form';
+import LifecycleA from './components/LifecycleA';
 import React from 'react';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Form />
+        <LifecycleA />
+
+        {/* <Form /> */}
 
         {/* <h1 className="error">Error</h1>
         <h1 className={style.success}>Success</h1> */}
