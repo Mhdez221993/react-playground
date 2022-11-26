@@ -1,14 +1,14 @@
 import './App.css';
 import './components/appStyle.css';
 
-import ParentComp from './components/ParentComp';
 import React from 'react';
+import RefsDemo from './components/RefsDemo';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <ParentComp />
+        <RefsDemo />
       </div>
     );
   }
