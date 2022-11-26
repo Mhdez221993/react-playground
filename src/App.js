@@ -1,14 +1,15 @@
 import './App.css';
 import './components/appStyle.css';
 
-import PostForm from './components/PostForm';
+import HookCounter from './components/HookCounter';
 import React from 'react';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <PostForm />
+        {/* <ClassCounter /> */}
+        <HookCounter />
       </div>
     );
   }
