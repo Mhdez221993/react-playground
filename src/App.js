@@ -9,8 +9,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <ClickCounter />
-        <HoverCounter />
+        <ClickCounter name='Doe' />
+        <br />
+        <br />
+        <HoverCounter name='Peter' />
       </div>
     );
   }
