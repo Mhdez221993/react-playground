@@ -1,13 +1,13 @@
 import './App.css';
 import './components/appStyle.css';
 
+import Parent from './components/Parent Child/Parent';
 import React from 'react';
-import UseReducer from './components/UseReducer/UseReducer';
 
 const App = () => {
     return (
       <div className="App">
-        <UseReducer />
+        <Parent />
       </div>
     );
 }
