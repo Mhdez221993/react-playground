@@ -1,13 +1,13 @@
 import './App.css';
 import './components/appStyle.css';
 
-import Parent from './components/Parent Child/Parent';
+import ContextParent from './components/context/ContextParent';
 import React from 'react';
 
 const App = () => {
     return (
       <div className="App">
-        <Parent />
+        <ContextParent />
       </div>
     );
 }
