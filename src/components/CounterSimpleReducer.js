@@ -15,7 +15,7 @@ const reducer = (state, action) => {
   }
 }
 
-const CounterOne = () => {
+const CounterSimpleReducer = () => {
   const [count, dispatch] = useReducer(reducer, initicialState)
 
   return (
@@ -28,4 +28,4 @@ const CounterOne = () => {
   );
 };
 
-export default CounterOne;
+export default CounterSimpleReducer;
