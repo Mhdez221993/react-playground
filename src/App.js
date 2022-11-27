@@ -1,13 +1,15 @@
 import './App.css';
 import './components/appStyle.css';
 
-import HookTimer from './components/HookTimer';
+import DocTitleOne from './components/DocTitleOne';
+import DocTitleTwo from './components/DocTitleTwo';
 import React from 'react';
 
 const App = () => {
     return (
       <div className="App">
-        <HookTimer />
+        <DocTitleOne />
+        <DocTitleTwo />
       </div>
     );
 }
