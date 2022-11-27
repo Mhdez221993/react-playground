@@ -1,15 +1,15 @@
 import './App.css';
 import './components/appStyle.css';
 
-import DocTitleOne from './components/DocTitleOne';
-import DocTitleTwo from './components/DocTitleTwo';
+import CounterFour from './components/CounterFour';
+import CounterOne from './components/CounterOne';
 import React from 'react';
 
 const App = () => {
     return (
       <div className="App">
-        <DocTitleOne />
-        <DocTitleTwo />
+        <CounterOne />
+        <CounterFour />
       </div>
     );
 }

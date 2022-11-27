@@ -13,4 +13,4 @@ const DocTitleOne = () => {
   );
 };
 
-export default DocTitleOne;
+export default DocTitleOne
