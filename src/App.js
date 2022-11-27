@@ -1,7 +1,7 @@
 import './App.css';
 import './components/appStyle.css';
 
-import ContexComponentC from './components/ContexComponentC';
+import CounterOne from './components/CounterOne';
 import React from 'react';
 
 export const UserContext  = React.createContext()
@@ -10,11 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <UserContext.Provider value={'Doe'}>
-          <ChannelContext.Provider value={'CodeEvolution'}>
-            <ContexComponentC />
-          </ChannelContext.Provider>
-        </UserContext.Provider>
+        <CounterOne />
       </div>
     );
   }
