@@ -1,13 +1,13 @@
 import './App.css';
 import './components/appStyle.css';
 
-import GrandParent from './components/Parent Child/GrandParent';
+import Parent from './components/Parent Child/Parent';
 import React from 'react';
 
 const App = () => {
     return (
       <div className="App">
-        <GrandParent />
+        <Parent />
       </div>
     );
 }
