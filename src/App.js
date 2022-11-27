@@ -11,9 +11,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <UserContext.Provider value={'Doe'}>
-        <ChannelContext.Provider value={'CodeEvolution'}>
-          <ContexComponentC />
-        </ChannelContext.Provider>
+          <ChannelContext.Provider value={'CodeEvolution'}>
+            <ContexComponentC />
+          </ChannelContext.Provider>
         </UserContext.Provider>
       </div>
     );
