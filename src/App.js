@@ -1,15 +1,13 @@
 import './App.css';
 import './components/appStyle.css';
 
-import CounterFour from './components/CounterFour';
-import CounterOne from './components/CounterOne';
 import React from 'react';
+import UserForm from './components/UserForm';
 
 const App = () => {
     return (
       <div className="App">
-        <CounterOne />
-        <CounterFour />
+        <UserForm />
       </div>
     );
 }
