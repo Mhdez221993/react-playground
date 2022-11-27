@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Child = ({children, name}) => {
+const Child = ({name, handleClick}) => {
   console.log('child render');
   return (
     <div>
-      {children} {name}
+      Hello {name}
     </div>
   );
 };
