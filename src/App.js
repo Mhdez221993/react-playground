@@ -1,7 +1,7 @@
 import './App.css';
 import './components/appStyle.css';
 
-import CounterComplexReducer from './components/CounterComplexReducer';
+import CounterComplexReducerOne from './components/CounterComplexReducerOne';
 import React from 'react';
 
 export const UserContext  = React.createContext()
@@ -10,7 +10,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <CounterComplexReducer />
+        <CounterComplexReducerOne />
       </div>
     );
   }
