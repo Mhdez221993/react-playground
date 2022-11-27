@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
-
 import ComponentE from './ComponentE';
+import React from 'react';
 
-class ComponentC extends Component {
-  render() {
-    return <ComponentE />
-  }
-}
+const ComponentC = () => {
+  return (
+    <div>
+      <ComponentE />
+    </div>
+  );
+};
 
-export default ComponentC;
+export default ComponentC
