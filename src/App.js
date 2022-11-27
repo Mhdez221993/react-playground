@@ -3,7 +3,7 @@ import './components/appStyle.css';
 
 import React, { createContext } from 'react';
 
-import DataFetchingOne from './components/DataFetchingOne';
+import DataFetchingTwo from './components/DataFetchingTwo';
 
 export const CountContent  = createContext()
 
@@ -27,7 +27,7 @@ const App = () => {
 
     return (
       <div className="App">
-        <DataFetchingOne />
+        <DataFetchingTwo />
       </div>
     );
 }
