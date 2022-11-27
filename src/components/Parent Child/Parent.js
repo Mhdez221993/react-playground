@@ -11,7 +11,9 @@ const Parent = ({children}) => {
     <div>
       <button onClick={() => setCount(prev => prev + 1)}>Parent Count = {count}</button>
       <button onClick={() => setName('John')}>Parent Count = {name}</button>
-      <Child name={name} />
+      <Child name={name}>
+        <strong>Childrend</strong>
+      </Child>
     </div>
   )
 }
