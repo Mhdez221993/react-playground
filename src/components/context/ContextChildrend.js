@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 
 import { CountContex } from './ContextParent';
 
-export const ChildA = () => {
+const ChildA = () => {
   console.log('ChildA Render');
   return (
     <div>
@@ -11,6 +11,8 @@ export const ChildA = () => {
     </div>
   )
 }
+
+export const MemoizedChilA = React.memo(ChildA)
 
 export const ChildB = () => {
   console.log('ChildB Render');

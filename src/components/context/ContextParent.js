@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { ChildA } from './ContextChildrend';
+import { MemoizedChilA } from './ContextChildrend';
 
 export const CountContex = React.createContext()
 
@@ -12,7 +12,7 @@ const ContextParent = () => {
     <div>
         <button onClick={() => setCount(prev => prev + 1)}>Count - {count}</button>
         <CountContex.Provider value={count}>
-          <ChildA />
+          <MemoizedChilA />
         </CountContex.Provider>
     </div>
   );
