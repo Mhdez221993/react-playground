@@ -92,4 +92,19 @@ describe('Application', () => {
     const customeElement = screen.getByTestId('custom-element')
     expect(customeElement).toBeInTheDocument()
   })
+
+  test('string match with regex, custome func', () => {
+    render(<Application />)
+    const paragraphText1 = screen.getByText((string) => string.startsWith('All'))
+    expect(paragraphText1).toBeInTheDocument()
+
+    const paragraphText2 = screen.getByText(/^All fields are mandatory$/i)
+    expect(paragraphText2).toBeInTheDocument()
+
+    const paragraphText3 = screen.getByText(/all/i)
+    expect(paragraphText3).toBeInTheDocument()
+
+    const paragraphText4 = screen.getByText(/All/)
+    expect(paragraphText4).toBeInTheDocument()
+  })
 })
