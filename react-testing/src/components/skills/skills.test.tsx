@@ -5,19 +5,19 @@ import Skills from './Skills'
 describe('Skills', () => {
   const skills = ['HTML', 'CSS', 'Ruby', 'JS']
 
-  test('get by role list (ul)', () =>{
+  test('get by role list (ul)', () => {
     render(<Skills skills={skills} />)
     const listElement = screen.getByRole('list')
     expect(listElement).toBeInTheDocument()
   })
 
-  test('get all by role (li)', () =>{
+  test('get all by role (li)', () => {
     render(<Skills skills={skills} />)
     const listElements = screen.getAllByRole('listitem')
     expect(listElements).toHaveLength(skills.length)
   })
 
-  test('render Login button', () =>{
+  test('render Login button', () => {
     render(<Skills skills={skills} />)
     const loginButton = screen.getByRole('button', {
       name: 'Login'
@@ -35,12 +35,16 @@ describe('Skills', () => {
 
   test('start learning button is eventually displayed', async () => {
     render(<Skills skills={skills} />)
+
+    // screen.debug()
     const startLearningButton = await screen.findByRole('button', {
       name: 'Start learning'
     },
     {
       timeout: 1100
     })
+    // screen.debug()
+
     expect(startLearningButton).toBeInTheDocument()
   })
 })
