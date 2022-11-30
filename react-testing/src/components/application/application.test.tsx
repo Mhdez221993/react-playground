@@ -62,4 +62,10 @@ describe('Application', () => {
     const namePlaceHolder = screen.getByPlaceholderText('Fullname')
     expect(namePlaceHolder).toBeInTheDocument()
   })
+
+  test('get by text (p)', () => {
+    render(<Application />)
+    const paragraphText = screen.getByText('All fields are mandatory')
+    expect(paragraphText).toBeInTheDocument()
+  })
 })
