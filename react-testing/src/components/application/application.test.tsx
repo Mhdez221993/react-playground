@@ -80,4 +80,10 @@ describe('Application', () => {
     const imgAltText = screen.getByAltText('a person with a laptop')
     expect(imgAltText).toBeInTheDocument()
   })
+
+  test('get by title (span)', () => {
+    render(<Application />)
+    const closeElement = screen.getByTitle('close')
+    expect(closeElement).toBeInTheDocument()
+  })
 })
