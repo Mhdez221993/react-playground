@@ -74,4 +74,10 @@ describe('Application', () => {
     const inputValue = screen.getByDisplayValue('Doe')
     expect(inputValue).toBeInTheDocument()
   })
+
+  test('get by alt text (img)', () => {
+    render(<Application />)
+    const imgAltText = screen.getByAltText('a person with a laptop')
+    expect(imgAltText).toBeInTheDocument()
+  })
 })
