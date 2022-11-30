@@ -5,7 +5,7 @@ type GreetProps = {
 const Greet = ({name}: GreetProps) => {
   return (
     <div>
-      <h1>Hello {name}</h1>
+      <h1>Hello {name ? name : 'Guest'}</h1>
     </div>
   );
 };
