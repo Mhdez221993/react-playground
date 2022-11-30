@@ -24,5 +24,17 @@ describe('Application', () => {
 
     const submitButton = screen.getByRole('button')
     expect(submitButton).toBeInTheDocument()
+
+    const pageHeading = screen.getByRole('heading', {
+      level: 1,
+      name: 'Job application form'
+    })
+    expect(pageHeading).toBeInTheDocument()
+
+    const sectionHeading = screen.getByRole('heading', {
+      level: 2,
+      name: 'Section 1'
+    })
+    expect(sectionHeading).toBeInTheDocument()
   })
 })
