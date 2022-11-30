@@ -7,9 +7,9 @@ const Skills = (props: SkillsProps) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
 
   useEffect(() => {
-    // setTimeout(() => {
-    //   setIsLoggedIn(true)
-    // }, 1001)
+    setTimeout(() => {
+      setIsLoggedIn(true)
+    }, 1001)
   }, [])
   return (
     <>
