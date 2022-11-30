@@ -68,4 +68,10 @@ describe('Application', () => {
     const paragraphText = screen.getByText('All fields are mandatory')
     expect(paragraphText).toBeInTheDocument()
   })
+
+  test('get by display value (input)', () => {
+    render(<Application />)
+    const inputValue = screen.getByDisplayValue('Doe')
+    expect(inputValue).toBeInTheDocument()
+  })
 })
