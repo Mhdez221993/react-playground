@@ -5,7 +5,7 @@ import { rest } from "msw"
 import { server } from "../../mocks/server"
 
 describe('Users', () => {
-  test('renders correctly', async () => {
+  test('renders correctly', () => {
     render(<Users />)
 
     const textElement = screen.getByRole('heading', {level: 1})

@@ -54,7 +54,9 @@ describe('Application', () => {
     render(<Application />)
 
     const submitButton = screen.getByRole('button')
+
     expect(submitButton).toBeInTheDocument()
+    expect(submitButton).toBeDisabled()
   })
 
   test('get by placeholder (input)', () => {
