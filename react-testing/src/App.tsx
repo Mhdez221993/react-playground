@@ -1,12 +1,15 @@
 import './App.css';
 
+import { AppProviders } from './providers/app-providers';
 import Counter from './components/counter/counter';
 
 function App() {
   return (
-    <div className="App">
-      <Counter />
-    </div>
+    <AppProviders>
+      <div className="App">
+        <Counter />
+      </div>
+    </AppProviders>
   );
 }
 
