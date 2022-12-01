@@ -1,7 +1,7 @@
-import "./App.css";
+import './App.css'
 
-import { AppProviders } from "./providers/app-providers";
-import Users from "./components/users/Users";
+import { AppProviders } from './providers/app-providers'
+import Users from './components/users/Users'
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Users />
       </div>
     </AppProviders>
-  );
+  )
 }
 
-export default App;
+export default App
