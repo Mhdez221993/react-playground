@@ -10,7 +10,9 @@ describe('Counter', () => {
     const countElement = screen.getByRole('heading')
     expect(countElement).toBeInTheDocument()
 
-    const incrementButton = screen.getByRole('button')
+    const incrementButton = screen.getByRole('button', {
+      name: 'Increment'
+    })
     expect(incrementButton).toBeInTheDocument()
   })
 
@@ -48,6 +50,23 @@ describe('Counter', () => {
 
     const countElement = screen.getByRole('heading')
     expect(countElement).toHaveTextContent('2')
+  })
+
+  test('render amount of 10 after clicking set value', () => {
+    render(<Counter />)
+
+    // input value 10
+    const amountInput = screen.getByRole('spinbutton')
+    user.type(amountInput, '10')
+    expect(amountInput).toHaveValue(10)
+
+    // click set count button
+    const buttonElement = screen.getByRole('button', {
+      name: 'Set Count',
+    })
+    user.click(buttonElement)
+    const countElement = screen.getByRole('heading')
+    expect(countElement).toHaveTextContent('10')
   })
 })
 
