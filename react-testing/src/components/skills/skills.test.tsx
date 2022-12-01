@@ -43,7 +43,7 @@ describe('Skills', () => {
       name: 'Start learning'
     },
     {
-      timeout: 1100
+      timeout: 300
     })
     // screen.debug()
     // logRoles(view.container)
