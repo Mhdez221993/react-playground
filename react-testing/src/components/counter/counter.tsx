@@ -7,8 +7,8 @@ const Counter = () => {
   return (
     <div>
       <h1>{count}</h1>
-      <input type="number" name="amount" value={amount} onChange={(e) => setAmount(parseInt(e.target.value))} />
       <button onClick={() => setCount(count => count + 1)}>Increment</button>
+      <input type="number" name="amount" value={amount} onChange={(e) => setAmount(parseInt(e.target.value))} />
       <button onClick={() => setCount(amount)}>Set Count</button>
     </div>
   );

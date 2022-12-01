@@ -52,7 +52,7 @@ describe('Counter', () => {
     expect(countElement).toHaveTextContent('2')
   })
 
-  test('render amount of 10 after clicking set value', () => {
+  test('render amount of 10 after innput 10 and clicking set value', () => {
     render(<Counter />)
 
     // input value 10
@@ -67,6 +67,27 @@ describe('Counter', () => {
     user.click(buttonElement)
     const countElement = screen.getByRole('heading')
     expect(countElement).toHaveTextContent('10')
+  })
+
+  test('elements are focused in the right order', () => {
+    render(<Counter />)
+
+    const incrementButton = screen.getByRole('button', {
+      name: 'Increment'
+    })
+    const amountInput = screen.getByRole('spinbutton')
+    const setButton = screen.getByRole('button', {
+      name: 'Set Count',
+    })
+
+    user.tab()
+    expect(incrementButton).toHaveFocus()
+
+    user.tab()
+    expect(amountInput).toHaveFocus()
+
+    user.tab()
+    expect(setButton).toHaveFocus()
   })
 })
 
