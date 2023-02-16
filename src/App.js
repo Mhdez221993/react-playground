@@ -1,18 +1,14 @@
 import './App.css';
-import './components/appStyle.css';
+import Counter from './Counter'
 
-import { ChildA } from './components/context/ContextChildrend';
-import ContextParent from './components/context/ContextParent';
 import React from 'react';
 
 const App = () => {
-    return (
-      <div className="App">
-        <ContextParent>
-          <ChildA />
-        </ContextParent>
-      </div>
-    );
+  return (
+    <div className="App">
+      <Counter />
+    </div>
+  );
 }
 
 export default App;
