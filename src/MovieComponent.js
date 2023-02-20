@@ -27,7 +27,7 @@ const MovieComponent = () => {
 
   return (
     <div data-testid="movie-component" className="movies">
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form">
         <div className="form-control">
           <label htmlFor="name">Movie Name</label>
           <br />
@@ -36,6 +36,7 @@ const MovieComponent = () => {
             id="name"
             value={state.name}
             name="name"
+            data-testid="name-input"
             onChange={handleState}
           />
         </div>
@@ -48,6 +49,7 @@ const MovieComponent = () => {
             id="rating"
             value={state.rating}
             name="rating"
+            data-testid="rating-input"
             onChange={handleState}
           />
         </div>
@@ -60,11 +62,17 @@ const MovieComponent = () => {
             id="duration"
             value={state.duration}
             name="duration"
+            data-testid="duration-input"
             onChange={handleState}
           />
         </div>
 
-        <button className="add-movie" type="submit">
+        <button
+          className="add-movie"
+          type="submit"
+          data-testid="add-movie"
+          onClick={handleSubmit}
+        >
           Add Movie
         </button>
       </form>

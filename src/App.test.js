@@ -1,21 +1,13 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 
 import App from "./App";
 import MovieComponent from "./MovieComponent";
 import { Provider } from "react-redux";
 import React from "react";
 import SearchComponent from "./SearchComponent";
-import configureMockStore from "redux-mock-store";
+import store from "./store";
 
 describe("MovieComponent", () => {
-  const initialState = {
-    movies: [{ name: "Lord of the Rings", rating: 30, duration: 80 }],
-    search: [],
-    noResult: "No movie found!",
-  };
-  const mockStore = configureMockStore([]);
-  let store = mockStore(initialState);
-
   it("render App component", () => {
     render(
       <Provider store={store}>
@@ -27,7 +19,7 @@ describe("MovieComponent", () => {
     expect(title).toBeInTheDocument();
   });
 
-  it("render app component", () => {
+  it("render MovieComponent", () => {
     render(
       <Provider store={store}>
         <MovieComponent />
@@ -45,5 +37,26 @@ describe("MovieComponent", () => {
     );
     const search = screen.getByTestId("search-component");
     expect(search).toBeInTheDocument();
+  });
+
+  it("add a new movie", () => {
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>
+    );
+    const nameInput = screen.getByTestId("name-input");
+    const ratingInput = screen.getByTestId("rating-input");
+    const durationInput = screen.getByTestId("duration-input");
+    const addMovie = screen.getByTestId("add-movie");
+
+    fireEvent.change(nameInput, { target: { value: "Lord of the ring" } });
+    fireEvent.change(ratingInput, { target: { value: "90" } });
+    fireEvent.change(durationInput, { target: { value: "150" } });
+    fireEvent.click(addMovie);
+
+    const newMovie = screen.getByText("Lord of the ring");
+
+    expect(newMovie).toBeInTheDocument();
   });
 });
