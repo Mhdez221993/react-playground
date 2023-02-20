@@ -17,6 +17,7 @@ const SearchComponent = () => {
   };
 
   let displayResult = state.length > 3 ? search : movies;
+  let displayNoResult = movies.length ? noResult : "";
 
   return (
     <div data-testid="search-component" className="search">
@@ -47,7 +48,7 @@ const SearchComponent = () => {
                 </div>
               </li>
             ))
-          : noResult}
+          : displayNoResult}
       </ul>
     </div>
   );

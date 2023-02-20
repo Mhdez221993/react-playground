@@ -17,9 +17,12 @@ const MovieComponent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    state.duration = Number(state.duration);
-    dispatch(addMovie(state));
-    setState(initialState);
+
+    if (state.name && state.duration && state.rating) {
+      state.duration = Number(state.duration);
+      dispatch(addMovie(state));
+      setState(initialState);
+    }
   };
 
   return (
