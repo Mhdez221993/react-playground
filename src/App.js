@@ -1,7 +1,10 @@
+import MovieComponent from "./MovieComponent";
+
 function App() {
   return (
     <div>
-      <h1>Count 1</h1>
+      <h1>Movie App</h1>
+      <MovieComponent />
     </div>
   );
 }
