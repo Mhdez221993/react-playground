@@ -17,7 +17,7 @@ const SearchComponent = () => {
   };
 
   let displayResult = state.length > 3 ? search : movies;
-  let displayNoResult = movies.length ? noResult : "";
+  let displayNoResult = movies && movies.length ? noResult : "";
 
   return (
     <div data-testid="search-component" className="search">
@@ -28,7 +28,7 @@ const SearchComponent = () => {
         onChange={handleSearch}
       />
       <ul>
-        {displayResult.length
+        {displayNoResult && displayResult.length
           ? displayResult.map((movie) => (
               <li
                 style={{
