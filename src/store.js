@@ -17,6 +17,7 @@ const movieSlice = createSlice({
 });
 
 export const { addMovie, searchMovie } = movieSlice.actions;
+export const { reducer } = movieSlice;
 
 const store = configureStore({
   reducer: {
