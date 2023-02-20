@@ -5,23 +5,23 @@
 .app {
   max-width: 1000px;
   margin: 0 auto;
-  display: grid;
   font-size: 17px;
   font-family: "Courier New", Courier, monospace;
+}
+
+.wrapper {
+  display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-template-areas:
-    "title title"
-    "movies search";
 }
 
 .title {
+  height: 100px;
   text-align: center;
   grid-area: title;
 }
 
 .movies {
-  grid-area: movies;
 }
 
 .form-control {
@@ -44,5 +44,5 @@ input {
 }
 
 .search {
-  grid-area: search;
+  padding: 20px;
 }

@@ -7,8 +7,10 @@ function App() {
   return (
     <div className="app">
       <h1 className="title">Movie App</h1>
-      <MovieComponent />
-      <SearchComponent />
+      <div className="wrapper">
+        <MovieComponent />
+        <SearchComponent />
+      </div>
     </div>
   );
 }
