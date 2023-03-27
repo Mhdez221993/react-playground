@@ -8,6 +8,18 @@ class Excel extends React.Component {
     this.sort = this.sort.bind(this);
   }
 
+  sort(e) {
+    const data = this.clone(this.state.data);
+    data.sort((a, b) => {
+      return a[e.target.cellIndex] > b[e.target.cellIndex] ? 1 : -1;
+    });
+    this.setState({ data });
+  }
+
+  clone(o) {
+    return JSON.parse(JSON.stringify(o));
+  }
+
   render() {
     return (
       <table>
