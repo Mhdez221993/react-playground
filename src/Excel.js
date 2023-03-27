@@ -4,16 +4,27 @@ import React from "react";
 class Excel extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: props.initialData };
+    this.state = { data: props.initialData, sortby: null, descending: false };
     this.sort = this.sort.bind(this);
   }
 
   sort(e) {
+    const column = e.target.cellIndex;
     const data = this.clone(this.state.data);
+    const descending = this.state.sortby === column && !this.state.descending;
+    console.log(column);
+
     data.sort((a, b) => {
-      return a[e.target.cellIndex] > b[e.target.cellIndex] ? 1 : -1;
+      if (a[column] === b[column]) return 0;
+      return descending
+        ? a[column] > b[column]
+          ? 1
+          : -1
+        : a[column] < b[column]
+        ? 1
+        : -1;
     });
-    this.setState({ data });
+    this.setState({ data, sortby: column, descending });
   }
 
   clone(o) {
