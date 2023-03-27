@@ -12,7 +12,6 @@ class Excel extends React.Component {
     const column = e.target.cellIndex;
     const data = this.clone(this.state.data);
     const descending = this.state.sortby === column && !this.state.descending;
-    console.log(column);
 
     data.sort((a, b) => {
       if (a[column] === b[column]) return 0;
@@ -36,11 +35,16 @@ class Excel extends React.Component {
       <table>
         <thead>
           <tr>
-            {this.props.headers.map((title, indx) => (
-              <th onClick={this.sort} key={indx}>
-                {title}
-              </th>
-            ))}
+            {this.props.headers.map((title, idx) => {
+              if (this.state.sortby === idx) {
+                title += this.state.descending ? " \u2191" : " \u2193";
+              }
+              return (
+                <th onClick={this.sort} key={idx}>
+                  {title}
+                </th>
+              );
+            })}
           </tr>
         </thead>
         <tbody>
