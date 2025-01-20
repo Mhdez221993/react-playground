@@ -1,9 +1,8 @@
-# Learn React
+# React + Vite
 
-## Helful links
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-* [React Docs](https://reactjs.org/docs/getting-started.html)
-* [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+Currently, two official plugins are available:
 
-* [Testing Library Docs](https://testing-library.com/docs/queries/byrole)
-* [Rules of ARIA attribute usage by HTML element](https://www.w3.org/TR/html-aria/#docconformance)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
