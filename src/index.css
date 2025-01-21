@@ -2,3 +2,7 @@ body {
     background-color: rgb(50, 50, 56);
     color: aliceblue;
 }
+
+.avatar {
+    border-radius: 50%;
+}
